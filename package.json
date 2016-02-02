@@ -1,0 +1,26 @@
+{
+  "name": "cordova-plugin-ping",
+  "version": "0.1.0",
+  "description": "Cordova Ping Plugin",
+  "cordova": {
+    "id": "cordova-plugin-ping",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t1st3/cordova-plugin-ping.git"
+  },
+  "bugs": {
+    "url": "https://github.com/t1st3/cordova-plugin-ping/issues"
+  },
+  "keywords": [
+    "cordova",
+    "ping",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "t1st3",
+  "license": "Apache-2.0"
+}
