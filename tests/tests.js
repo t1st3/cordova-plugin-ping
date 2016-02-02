@@ -8,9 +8,11 @@ exports.defineAutoTests = function () {
 
     it('should contain a results specification that is an array', function (done) {
       var p = new window.ping(['github.com']);
-      expect(p.results).toBeDefined();
-      //expect(p.results.length > 0).toBe(true);
-      done();
+      setTimeout(function () {
+        expect(p.results).toBeDefined();
+        expect(p.results.length > 0).toBe(true);
+        done();
+      }, 1000);
     });
   });
 };
