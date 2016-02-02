@@ -7,6 +7,10 @@ This plugin implements the [`ping` software utility](https://en.wikipedia.org/wi
 
 ## Installation
 
+> cordova plugin add cordova-plugin-ping
+
+or
+
 > cordova plugin add https://github.com/t1st3/cordova-plugin-ping.git
 
 ## Usage
