@@ -9,7 +9,7 @@ Although the object is in the global scope, it is not available until after the 
 ```js
 document.addEventListener('deviceready', onDeviceReady, false);
 function onDeviceReady() {
-  var p = new ping(['github.com', 'undefineddomain.com']);
+  var p = new ping(['github.com', 'undefineddomain.com', '192.168.1.1']);
   console.log(p.results);
 }
 ```
@@ -39,6 +39,11 @@ Results look like this:
     "ip": "undefineddomain.com",
     "ping": "timeout",
     "avg": 0
+  },
+  {
+    "ip": "192.168.1.1",
+    "ping": "success",
+    "avg": 35.654
   }
 ]
 ```
