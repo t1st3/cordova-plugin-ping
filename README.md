@@ -1,6 +1,8 @@
 
 # cordova-plugin-ping
 
+[![NPM version](https://img.shields.io/npm/v/cordova-plugin-ping.svg)](https://www.npmjs.org/package/cordova-plugin-ping)
+
 This plugin defines a global `ping` object.
 Although the object is in the global scope, it is not available until after the `deviceready` event.
 
