@@ -2,7 +2,7 @@
   <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-ping-tests"
-    version="0.1.1">
+    version="0.2.0">
     <name>Ping Tests</name>
     <license>Apache 2.0</license>
 
