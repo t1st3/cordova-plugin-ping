@@ -64,17 +64,17 @@ Results look like this:
 [
   {
     "ip": "github.com",
-    "ping": "success",
+    "status": "success",
     "avg": 40.131
   },
   {
     "ip": "undefineddomain.com",
-    "ping": "timeout",
+    "status": "timeout",
     "avg": 0
   },
   {
     "ip": "192.168.1.1",
-    "ping": "success",
+    "status": "success",
     "avg": 35.654
   }
 ]

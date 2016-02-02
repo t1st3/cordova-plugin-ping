@@ -42,12 +42,12 @@ public class Ping extends CordovaPlugin {
           JSONObject r = new JSONObject();
           r.put("ip", ip);
           if (result > 0) {
-            r.put("ping", "success");
+            r.put("status", "success");
             r.put("avg", result);
             resultList.put(r);
             System.out.println("success \n");
           } else {
-            r.put("ping", "timeout");
+            r.put("status", "timeout");
             r.put("avg", 0);
             resultList.put(r);
             System.out.println("timeout \n");
