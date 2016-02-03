@@ -5,15 +5,23 @@ var utils = require('cordova/utils'),
 
 function Ping (ipList) {
   this.results = null;
-  var self = this;
-  self.doPing(ipList, function (info) {
-    self.results = info;
-  }, function (e) {
-    utils.alert('[ERROR] Error initializing Cordova: ' + e);
-  });
 }
 
-Ping.prototype.doPing = function (ipList, successCallback, errorCallback) {
+Ping.prototype.ping = function (ipList, success, err) {
+  var successCallback, errorCallback, self;
+  self = this;
+  successCallback = function (r) {
+    self.results = r;
+    if (success && typeof success === 'function') {
+      success(r);
+    }
+  };
+  errorCallback = function (e) {
+    utils.alert('[ERROR] Error initializing Cordova: ' + e);
+    if (err && typeof err === 'function') {
+      err(e);
+    }
+  };
   exec(successCallback, errorCallback, "Ping", "getPingInfo", ipList);
 };
 

@@ -19,14 +19,20 @@ This plugin defines a global `ping` object.
 Although the object is in the global scope, it is not available until after the `deviceready` event.
 
 ### Ping a domain
-
+        
 ```js
 document.addEventListener('deviceready', onDeviceReady, false);
 function onDeviceReady() {
-  var p = new ping(['github.com']);
-  setTimeout(function () {
-    console.log(p.results);
-  }, 1000);
+  var p, success, err, ipList;
+  ipList = ['tiste.org'];
+  success = function (results) {
+    console.log(results);
+  };
+  err = function (e) {
+    console.log('Error: ' + e);
+  };
+  p = new Ping();
+  p.ping(ipList, success, err);
 }
 ```
 
@@ -35,10 +41,16 @@ function onDeviceReady() {
 ```js
 document.addEventListener('deviceready', onDeviceReady, false);
 function onDeviceReady() {
-  var p = new ping(['192.168.1.1']);
-  setTimeout(function () {
-    console.log(p.results);
-  }, 1000);
+  var p, success, err, ipList;
+  ipList = ['192.168.1.254'];
+  success = function (results) {
+    console.log(results);
+  };
+  err = function (e) {
+    console.log('Error: ' + e);
+  };
+  p = new Ping();
+  p.ping(ipList, success, err);
 }
 ```
 
@@ -47,10 +59,16 @@ function onDeviceReady() {
 ```js
 document.addEventListener('deviceready', onDeviceReady, false);
 function onDeviceReady() {
-  var p = new ping(['github.com', 'undefineddomain.com', '192.168.1.1']);
-  setTimeout(function () {
-    console.log(p.results);
-  }, 1000);
+  var p, success, err, ipList;
+  ipList = ['tiste.org', 'undefineddomain.com', '192.168.1.254'];
+  success = function (results) {
+    console.log(results);
+  };
+  err = function (e) {
+    console.log('Error: ' + e);
+  };
+  p = new Ping();
+  p.ping(ipList, success, err);
 }
 ```
 

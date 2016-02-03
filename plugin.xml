@@ -11,7 +11,7 @@
     <issue>https://github.com/t1st3/cordova-plugin-ping/issues</issue>
 
     <js-module src="www/ping.js" name="ping">
-      <clobbers target="ping" />
+      <clobbers target="Ping" />
     </js-module>
 
     <platform name="android">
