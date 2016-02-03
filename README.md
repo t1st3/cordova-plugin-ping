@@ -15,7 +15,7 @@ or
 
 ## Usage
 
-This plugin defines a global `ping` object.
+This plugin defines a global `Ping` object.
 Although the object is in the global scope, it is not available until after the `deviceready` event.
 
 ### Ping a domain
@@ -72,15 +72,19 @@ function onDeviceReady() {
 }
 ```
 
-## Properties
+## Methods
 
-- ping.results
+- Ping.ping
 
-## ping.results
+## Ping.ping
 
-Get the the results of the`ping`.
+This method takes the following arguments:
 
-Results look like this:
+* ipList: an array of domain names or IP addresses
+* success: a callback function that handles success
+* err: a callback function that handles error
+
+The callback function for success takes one argument, which is a JSON array of results:
 
 ```json
 [
@@ -101,6 +105,8 @@ Results look like this:
   }
 ]
 ```
+
+The callback function for error takes one argument, which is the error emitted.
 
 ### Supported Platforms
 
