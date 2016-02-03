@@ -40,7 +40,7 @@ public class Ping extends CordovaPlugin {
           String ip = args.getString(index);
           double result = doPing(ip);
           JSONObject r = new JSONObject();
-          r.put("ip", ip);
+          r.put("target", ip);
           if (result > 0) {
             r.put("status", "success");
             r.put("avg", result);

@@ -67,17 +67,17 @@ Results look like this:
 ```json
 [
   {
-    "ip": "github.com",
+    "target": "github.com",
     "status": "success",
     "avg": 40.131
   },
   {
-    "ip": "undefineddomain.com",
+    "target": "undefineddomain.com",
     "status": "timeout",
     "avg": 0
   },
   {
-    "ip": "192.168.1.1",
+    "target": "192.168.1.1",
     "status": "success",
     "avg": 35.654
   }
