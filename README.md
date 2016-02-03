@@ -87,3 +87,10 @@ Results look like this:
 ### Supported Platforms
 
 - Android
+
+
+*****
+
+## License
+
+This project is licensed under the [MIT license](https://opensource.org/licenses/MIT). Check the [LICENSE.md file](https://github.com/t1st3/cordova-plugin-ping/blob/master/LICENSE.md).
