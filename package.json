@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-ping",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Cordova Ping Plugin",
   "cordova": {
     "id": "cordova-plugin-ping",
