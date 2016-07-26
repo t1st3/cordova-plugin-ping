@@ -30,8 +30,8 @@ Although the object is in the global scope, it is not available until after the 
 document.addEventListener('deviceready', onDeviceReady, false);
 function onDeviceReady() {
   var p, success, err, ipList;
-  ipList = [{query: 'www.tiste.org', timeout: 1,'retry': 3,version:"v4"},
-            {query: 'www.somesite.com', timeout: 2,'retry': 3,version:"v6"}];
+  ipList = [{query: 'www.tiste.org', timeout: 1,retry: 3,version:'v4'},
+            {query: 'www.somesite.com', timeout: 2,'retry': 3,version:'v6'}];
   success = function (results) {
     console.log(results);
   };
