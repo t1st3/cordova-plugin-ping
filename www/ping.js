@@ -17,7 +17,6 @@ Ping.prototype.ping = function (ipList, success, err) {
     }
   };
   errorCallback = function (e) {
-    utils.alert('[ERROR] Error initializing Cordova: ' + e);
     if (err && typeof err === 'function') {
       err(e);
     }
