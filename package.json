@@ -12,9 +12,6 @@
     "type": "git",
     "url": "git+https://github.com/t1st3/cordova-plugin-ping.git"
   },
-  "bugs": {
-    "url": "https://github.com/t1st3/cordova-plugin-ping/issues"
-  },
   "keywords": [
     "cordova",
     "ping",
