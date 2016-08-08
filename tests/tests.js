@@ -14,15 +14,17 @@ exports.defineAutoTests = function () {
       success = function (r) {
         expect(r).toBeDefined();
         expect(r.length > 0).toBe(true);
-        expect(r[0].target).toBe('github.com');
-        expect(r[0].status).toBe('success');
-        expect(typeof r[0].avg).toBe('number');
+        expect(r[0].response.result.pctTransmitted).toBe('3');
+        expect(r[0].response.result.pctReceived).toBe('3');
+        expect(r[0].response.result.pctLoss).toBe('0%');
+        expect(r[0].response.result.target).toBe('github.com');
+        expect(r[0].response.status).toBe('success');
         done();
       };
       err = function (e) {
         console.log(e);
       };
-      p.ping(['github.com'], success, err);
+      p.ping([{query: 'github.com', timeout: 1, retry: 3, version: 'v4'}], success, err);
     });
 
     it('should take an argument that is an array of results (for un-existing domain)', function (done) {
@@ -31,15 +33,17 @@ exports.defineAutoTests = function () {
       success = function (r) {
         expect(r).toBeDefined();
         expect(r.length > 0).toBe(true);
-        expect(r[0].target).toBe('undefineddomain.com');
-        expect(r[0].status).toBe('timeout');
-        expect(typeof r[0].avg).toBe('number');
+        expect(r[0].response.result.pctTransmitted).toBe('3');
+        expect(r[0].response.result.pctReceived).toBe('0');
+        expect(r[0].response.result.pctLoss).toBe('100%');
+        expect(r[0].response.result.target).toBe('undefineddomain.com');
+        expect(r[0].response.status).toBe('timeout');
         done();
       };
       err = function (e) {
         console.log(e);
       };
-      p.ping(['undefineddomain.com'], success, err);
+      p.ping([{query: 'undefineddomain.com', timeout: 1, retry: 3, version: 'v6'}], success, err);
     });
   });
 };
