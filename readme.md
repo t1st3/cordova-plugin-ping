@@ -5,6 +5,12 @@
 
 This plugin implements the [`ping` software utility](https://en.wikipedia.org/wiki/Ping_%28networking_utility%29).
 
+
+## Supported Platforms
+
+- Android
+
+
 ## Installation
 
 > cordova plugin add cordova-plugin-ping
@@ -43,11 +49,9 @@ function onDeviceReady() {
 }
 ```
 
-## Methods
+## API
 
-- Ping.ping
-
-## Ping.ping
+### Ping.ping
 
 This method takes the following arguments:
 
@@ -101,12 +105,6 @@ The callback function for success takes one argument, which is a JSON array of r
 
 The callback function for error takes one argument, which is the error emitted.
 
-### Supported Platforms
-
-- Android
-
-
-*****
 
 ## License
 

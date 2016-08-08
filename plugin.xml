@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    id="cordova-plugin-ping"
-    version="0.3.1">
-    <name>Ping</name>
-    <description>Cordova Ping Plugin</description>
-    <license>MIT</license>
-    <keywords>cordova,ping</keywords>
-    <repo>https://github.com/t1st3/cordova-plugin-ping.git</repo>
-    <issue>https://github.com/t1st3/cordova-plugin-ping/issues</issue>
+	<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		id="cordova-plugin-ping"
+		version="0.3.1">
+		<name>Ping</name>
+		<description>Cordova Ping Plugin</description>
+		<license>MIT</license>
+		<keywords>cordova,ping</keywords>
+		<repo>https://github.com/t1st3/cordova-plugin-ping.git</repo>
+		<issue>https://github.com/t1st3/cordova-plugin-ping/issues</issue>
 
-    <js-module src="www/ping.js" name="ping">
-      <clobbers target="Ping" />
-    </js-module>
+		<js-module src="www/ping.js" name="ping">
+			<clobbers target="Ping" />
+		</js-module>
 
-    <platform name="android">
-      <config-file target="res/xml/config.xml" parent="/*">
-        <feature name="Ping">
-          <param name="android-package" value="org.tiste.cordova.ping.Ping"/>
-        </feature>
-      </config-file>
-      <source-file src="src/android/Ping.java" target-dir="src/org/tiste/cordova/ping"/>
-    </platform>
-  </plugin>
+		<platform name="android">
+			<config-file target="res/xml/config.xml" parent="/*">
+				<feature name="Ping">
+					<param name="android-package" value="org.tiste.cordova.ping.Ping"/>
+				</feature>
+			</config-file>
+			<source-file src="src/android/Ping.java" target-dir="src/org/tiste/cordova/ping"/>
+		</platform>
+	</plugin>
