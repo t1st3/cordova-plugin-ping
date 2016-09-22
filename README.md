@@ -104,6 +104,7 @@ The callback function for error takes one argument, which is the error emitted.
 ### Supported Platforms
 
 - Android
+- iOS
 
 
 *****
