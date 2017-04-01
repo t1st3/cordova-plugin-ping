@@ -1,6 +1,8 @@
 
 # cordova-plugin-ping
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/t1st3/cordova-plugin-ping.svg)](https://greenkeeper.io/)
+
 [![NPM version](https://img.shields.io/npm/v/cordova-plugin-ping.svg)](https://www.npmjs.org/package/cordova-plugin-ping)
 
 This plugin implements the [`ping` software utility](https://en.wikipedia.org/wiki/Ping_%28networking_utility%29).
