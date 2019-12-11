@@ -9,7 +9,7 @@ This plugin implements the [`ping` software utility](https://en.wikipedia.org/wi
 ## Supported Platforms
 
 - Android
-
+- iOS
 
 ## Installation
 
@@ -31,7 +31,6 @@ Although the object is in the global scope, it is not available until after the 
 > - retry :  Number of echo requests to send.
 > - version : Ping IPv4 or IPv6 address (Ping or Ping6).
 
-        
 ```js
 document.addEventListener('deviceready', onDeviceReady, false);
 function onDeviceReady() {
